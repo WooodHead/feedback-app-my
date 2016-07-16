@@ -11,4 +11,4 @@ var QuestionSchema = new mongoose.Schema({
 
 QuestionSchema.plugin(mongoosePaginate);
 
-module.exports=mongoose.model('questions',QuestionSchema);
+module.exports=mongoose.model('weike',QuestionSchema);
