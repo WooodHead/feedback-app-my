@@ -1,5 +1,9 @@
 extends layout
-
 block content
-  h1= title
-  p Welcome to #{title}
+  body(data-ng-app='angularRestfulAuth')
+    include ./header
+    h1= title
+    p Welcome to #{title}
+    p {{100+2}}
+    hr
+    div(data-ng-view)
