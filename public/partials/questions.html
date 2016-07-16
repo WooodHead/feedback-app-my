@@ -2,11 +2,10 @@
 
 <div data-ng-controller='QuestionsCtrl'>
 <div class="panel panel-primary">
-<div class="panel-heading">Words</div>
    <dir-pagination-controls pagination-id="questions" template-url="/lib/pagination/dirPagination2.tpl.html"
                                          on-page-change="pageChanged(newPageNumber)"/>
- 
-      <div pagination-id="questions" dir-paginate-start="question in questions | itemsPerPage: limit"
+ <ul>
+      <li pagination-id="questions" dir-paginate-start="question in questions | itemsPerPage: limit"
                         total-items="total"
                         current-page="page">
         <h2>{{question.word}}        <small>{{question.pron}}</small>
@@ -14,9 +13,10 @@
 <ul ng-repeat='def in question.definition'>
       <li>{{def}}</li>
 </ul>
-      </div>
+      </li>
 
       <hr dir-paginate-end/>
+      </ul>
 
       <dir-pagination-controls pagination-id="questions" template-url="/lib/pagination/dirPagination2.tpl.html"
                                          on-page-change="pageChanged(newPageNumber)"/>
